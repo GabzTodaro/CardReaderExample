@@ -1,0 +1,16 @@
+PODS:
+  - CardIO (5.4.1)
+
+DEPENDENCIES:
+  - CardIO
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CardIO
+
+SPEC CHECKSUMS:
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+
+PODFILE CHECKSUM: 33c1c51ef1ca26bcf7f455107b778697f9008234
+
+COCOAPODS: 1.5.3
