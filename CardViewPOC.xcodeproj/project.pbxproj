@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132EF8D029E1C1B8BD2A3E84 /* libPods-CardViewPOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1510788B8A520DCFB88A2BB /* libPods-CardViewPOC.a */; };
 		C099C48D2177A716007B8ACC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C099C48C2177A716007B8ACC /* AppDelegate.m */; };
 		C099C4902177A716007B8ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099C48F2177A716007B8ACC /* ViewController.m */; };
 		C099C4932177A716007B8ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C099C4912177A716007B8ACC /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		168AC4E6A2412068C38BF531 /* Pods-CardViewPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardViewPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardViewPOC/Pods-CardViewPOC.debug.xcconfig"; sourceTree = "<group>"; };
+		2CB056176D40FB3CB71FE248 /* Pods-CardViewPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardViewPOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardViewPOC/Pods-CardViewPOC.release.xcconfig"; sourceTree = "<group>"; };
 		C099C4882177A716007B8ACC /* CardViewPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardViewPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C099C48B2177A716007B8ACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C099C48C2177A716007B8ACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		C099C4972177A718007B8ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C099C4992177A718007B8ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C099C49A2177A718007B8ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1510788B8A520DCFB88A2BB /* libPods-CardViewPOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CardViewPOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				132EF8D029E1C1B8BD2A3E84 /* libPods-CardViewPOC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		994896041928BC1CD1349AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1510788B8A520DCFB88A2BB /* libPods-CardViewPOC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C099C47F2177A716007B8ACC = {
 			isa = PBXGroup;
 			children = (
 				C099C48A2177A716007B8ACC /* CardViewPOC */,
 				C099C4892177A716007B8ACC /* Products */,
+				F65D20CA41396735F6A0F7C1 /* Pods */,
+				994896041928BC1CD1349AF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,12 +78,21 @@
 				C099C48E2177A716007B8ACC /* ViewController.h */,
 				C099C48F2177A716007B8ACC /* ViewController.m */,
 				C099C4912177A716007B8ACC /* Main.storyboard */,
-				C099C4942177A718007B8ACC /* Assets.xcassets */,
 				C099C4962177A718007B8ACC /* LaunchScreen.storyboard */,
 				C099C4992177A718007B8ACC /* Info.plist */,
 				C099C49A2177A718007B8ACC /* main.m */,
+				C099C4942177A718007B8ACC /* Assets.xcassets */,
 			);
 			path = CardViewPOC;
+			sourceTree = "<group>";
+		};
+		F65D20CA41396735F6A0F7C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				168AC4E6A2412068C38BF531 /* Pods-CardViewPOC.debug.xcconfig */,
+				2CB056176D40FB3CB71FE248 /* Pods-CardViewPOC.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C099C49E2177A718007B8ACC /* Build configuration list for PBXNativeTarget "CardViewPOC" */;
 			buildPhases = (
+				031AFC122C6552EFA13E2485 /* [CP] Check Pods Manifest.lock */,
 				C099C4842177A716007B8ACC /* Sources */,
 				C099C4852177A716007B8ACC /* Frameworks */,
 				C099C4862177A716007B8ACC /* Resources */,
@@ -135,6 +160,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		031AFC122C6552EFA13E2485 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardViewPOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C099C4842177A716007B8ACC /* Sources */ = {
@@ -283,6 +333,7 @@
 		};
 		C099C49F2177A718007B8ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168AC4E6A2412068C38BF531 /* Pods-CardViewPOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +351,7 @@
 		};
 		C099C4A02177A718007B8ACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CB056176D40FB3CB71FE248 /* Pods-CardViewPOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

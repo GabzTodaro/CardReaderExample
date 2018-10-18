@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,139 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esG-B5-qAF">
+                                <rect key="frame" x="62" y="64" width="251" height="30"/>
+                                <state key="normal" title="Use camera to read card information"/>
+                                <connections>
+                                    <action selector="openCardViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MLL-Ez-9wm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQI-ou-6nF">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWH-DW-Jno">
+                                <rect key="frame" x="16" y="356.5" width="168" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TA2-A6-DHo">
+                                <rect key="frame" x="195.5" y="356.5" width="163.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON5-mU-y3d">
+                                <rect key="frame" x="186.5" y="328.5" width="2" height="10"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="DbI-iv-MZB"/>
+                                    <constraint firstAttribute="height" constant="10" id="rIZ-JH-sXN"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Holder name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKU-yg-cxT">
+                                <rect key="frame" x="16" y="394.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asks for holder name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-43-xlg">
+                                <rect key="frame" x="16" y="110" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isa-ie-HNy">
+                                <rect key="frame" x="310" y="105" width="51" height="31"/>
+                                <connections>
+                                    <action selector="holderNameSwitchTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="aZB-kx-2UW"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supress card image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsU-uR-OpT">
+                                <rect key="frame" x="16" y="149" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-bt-mNR">
+                                <rect key="frame" x="310" y="144" width="51" height="31"/>
+                                <connections>
+                                    <action selector="holderNameSwitchTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="tzM-pN-OQ7"/>
+                                    <action selector="supressCardImageTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="O0m-Hf-9IG"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show secure card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ano-1f-nnz">
+                                <rect key="frame" x="16" y="188" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e86-SW-624">
+                                <rect key="frame" x="310" y="183" width="51" height="31"/>
+                                <connections>
+                                    <action selector="holderNameSwitchTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="tys-Vn-16g"/>
+                                    <action selector="secureCardNumberTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jcv-qL-902"/>
+                                    <action selector="supressCardImageTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="3L2-qH-djN"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PKU-yg-cxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2oP-eJ-SlY"/>
+                            <constraint firstItem="TA2-A6-DHo" firstAttribute="top" secondItem="EQI-ou-6nF" secondAttribute="bottom" constant="8" id="4nD-nD-0si"/>
+                            <constraint firstItem="6tC-43-xlg" firstAttribute="top" secondItem="esG-B5-qAF" secondAttribute="bottom" constant="16" id="BEX-0s-7af"/>
+                            <constraint firstItem="YsU-uR-OpT" firstAttribute="leading" secondItem="6tC-43-xlg" secondAttribute="leading" id="Eld-X2-DBh"/>
+                            <constraint firstItem="e86-SW-624" firstAttribute="centerY" secondItem="Ano-1f-nnz" secondAttribute="centerY" id="H4j-NL-0uB"/>
+                            <constraint firstItem="KlC-bt-mNR" firstAttribute="centerY" secondItem="YsU-uR-OpT" secondAttribute="centerY" id="I63-cc-MEW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TA2-A6-DHo" secondAttribute="trailing" constant="16" id="NYl-4i-8wM"/>
+                            <constraint firstItem="EQI-ou-6nF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PAR-2Y-amW"/>
+                            <constraint firstItem="esG-B5-qAF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="S3k-1U-ft9"/>
+                            <constraint firstItem="WWH-DW-Jno" firstAttribute="top" secondItem="EQI-ou-6nF" secondAttribute="bottom" constant="8" id="T6N-Lw-uPH"/>
+                            <constraint firstItem="EQI-ou-6nF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TiG-6K-fre"/>
+                            <constraint firstItem="Ano-1f-nnz" firstAttribute="top" secondItem="YsU-uR-OpT" secondAttribute="bottom" constant="18" id="VxC-tn-OoO"/>
+                            <constraint firstItem="WWH-DW-Jno" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WnX-tD-QEE"/>
+                            <constraint firstItem="6tC-43-xlg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wv7-Qs-r3M"/>
+                            <constraint firstItem="esG-B5-qAF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YWX-IH-p9P"/>
+                            <constraint firstItem="KlC-bt-mNR" firstAttribute="trailing" secondItem="isa-ie-HNy" secondAttribute="trailing" id="ZIm-va-Kdt"/>
+                            <constraint firstItem="TA2-A6-DHo" firstAttribute="leading" secondItem="ON5-mU-y3d" secondAttribute="trailing" constant="7" id="akc-qu-pVM"/>
+                            <constraint firstItem="ON5-mU-y3d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eMH-NQ-8Ko"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e86-SW-624" secondAttribute="trailing" constant="16" id="h7E-s9-kAW"/>
+                            <constraint firstItem="ON5-mU-y3d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIU-TO-ah7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="isa-ie-HNy" secondAttribute="trailing" constant="16" id="iK2-Wv-nir"/>
+                            <constraint firstItem="e86-SW-624" firstAttribute="top" secondItem="KlC-bt-mNR" secondAttribute="bottom" constant="8" id="ocY-im-NP5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EQI-ou-6nF" secondAttribute="trailing" constant="16" id="paE-5F-3Hb"/>
+                            <constraint firstItem="KlC-bt-mNR" firstAttribute="top" secondItem="isa-ie-HNy" secondAttribute="bottom" constant="8" id="qnq-L0-O3x"/>
+                            <constraint firstItem="YsU-uR-OpT" firstAttribute="top" secondItem="6tC-43-xlg" secondAttribute="bottom" constant="18" id="rwm-5G-kxu"/>
+                            <constraint firstItem="PKU-yg-cxT" firstAttribute="top" secondItem="WWH-DW-Jno" secondAttribute="bottom" constant="8" id="vD9-SA-iUq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PKU-yg-cxT" secondAttribute="trailing" constant="16" id="vKt-bt-ZMr"/>
+                            <constraint firstItem="isa-ie-HNy" firstAttribute="centerY" secondItem="6tC-43-xlg" secondAttribute="centerY" id="vRy-NA-UHq"/>
+                            <constraint firstItem="Ano-1f-nnz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vX5-Ed-Bwk"/>
+                            <constraint firstItem="ON5-mU-y3d" firstAttribute="leading" secondItem="WWH-DW-Jno" secondAttribute="trailing" constant="2.5" id="wm6-zS-Sf4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7HM-Q0-ZXD"/>
+                    <connections>
+                        <outlet property="mCVV" destination="TA2-A6-DHo" id="dfS-GH-ydc"/>
+                        <outlet property="mCardNumber" destination="EQI-ou-6nF" id="OUv-f5-Ypg"/>
+                        <outlet property="mExpDate" destination="WWH-DW-Jno" id="Y65-7Z-J3u"/>
+                        <outlet property="mHolderName" destination="PKU-yg-cxT" id="kML-Kc-bMg"/>
+                        <outlet property="mHolderNameSwitch" destination="isa-ie-HNy" id="xQ9-Ue-wnx"/>
+                        <outlet property="mSecureCardNumberSwitch" destination="e86-SW-624" id="2Yh-2w-Zow"/>
+                        <outlet property="mSupressCardImageSwitch" destination="KlC-bt-mNR" id="S3O-Oy-rFe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>
